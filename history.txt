@@ -1,0 +1,64 @@
+﻿
+:history
+
+// creating business nodes
+CREATE(b:Business{business_name: "SHARDA OFFICE SUPPLIES INC."}) RETURN b
+CREATE(b:Business{business_name: "NZO CORP."}) RETURN b
+CREATE(b:Business{business_name: "NZO CORP.1"}) RETURN b
+CREATE(b:Business{business_name: "SHARDA OFFICE SUPPLIES INC.1"}) RETURN b
+CREATE(b:Business{business_name: "SHARDA OFFICE SUPPLIES INC.2"}) RETURN b
+
+
+
+// creating result nodes
+CREATE(r:Result{result: "Pass"}) RETURN r
+CREATE(r:Result{result: "Out of Business"}) RETURN r
+CREATE(r:Result{result: "Violation Issued"}) RETURN r
+CREATE(r:Result{result: "No Violation Issued"}) RETURN r
+
+
+
+// creating sector nodes
+CREATE(s:Sector{sector: "Grocery-Retail -808"}) RETURN s
+CREATE(s:Sector{sector: "Cigarette Retail Dealer - 127"}) RETURN s
+
+
+
+// creating zip node
+CREATE(z:Zip{zip: 11242}) RETURN z
+
+
+
+// creating relationship of business with result nodes
+MATCH (b:Business {business_name: "SHARDA OFFICE SUPPLIES INC.2"}), (r:Result{result:"No Violation Issued"}) MERGE (b)-[:RESULTED_TO]->(r);
+MATCH (b:Business {business_name: "SHARDA OFFICE SUPPLIES INC.1"}), (r:Result{result:"Out of Business"}) MERGE (b)-[:RESULTED_TO]->(r);
+MATCH (b:Business {business_name: "NZO CORP.1"}), (r:Result{result:"Violation Issued"}) MERGE (b)-[:RESULTED_TO]->(r);
+MATCH (b:Business {business_name: "NZO CORP."}), (r:Result{result:"Pass"}) MERGE (b)-[:RESULTED_TO]->(r);
+MATCH (b:Business {business_name: "SHARDA OFFICE SUPPLIES INC."}), (r:Result{result:"No Violation Issued"}) MERGE (b)-[:RESULTED_TO]->(r);
+
+
+
+// creating relationship of business with sector nodes
+MATCH (b:Business {business_name: "SHARDA OFFICE SUPPLIES INC.2"}), (s:Sector{sector:"Cigarette Retail Dealer -127"}) MERGE (b)-[r:IS_OF_TYPE]->(s);
+MATCH (b:Business {business_name: "SHARDA OFFICE SUPPLIES INC.1"}), (s:Sector{sector:"Cigarette Retail Dealer -127"}) MERGE (b)-[r:IS_OF_TYPE]->(s);
+MATCH (b:Business {business_name: "NZO CORP.1"}), (s:Sector{sector:"Grocery-Retail - 808"}) MERGE (b)-[r:IS_OF_TYPE]->(s);
+MATCH (b:Business {business_name: "NZO CORP."}), (s:Sector{sector:"Grocery-Retail - 808"}) MERGE (b)-[r:IS_OF_TYPE]->(s);
+MATCH (b:Business {business_name: "SHARDA OFFICE SUPPLIES INC."}), (s:Sector{sector:"Grocery-Retail - 808"}) MERGE (b)-[r:IS_OF_TYPE]->(s);
+
+
+
+// creating relationship of business with zip code nodes
+MATCH (b:Business {business_name: "SHARDA OFFICE SUPPLIES INC.2"}), (z:Zip{zip:"11242"}) MERGE (b)-[r:BELONGS_TO]->(z);
+MATCH (b:Business {business_name: "SHARDA OFFICE SUPPLIES INC.1"}), (z:Zip{zip:"11242"}) MERGE (b)-[r:BELONGS_TO]->(z);
+MATCH (b:Business {business_name: "NZO CORP.1"}), (z:Zip{zip:"11242"}) MERGE (b)-[r:BELONGS_TO]->(z);
+MATCH (b:Business {business_name: "NZO CORP."}), (z:Zip{zip:"11242"}) MERGE (b)-[r:BELONGS_TO]->(z);
+MATCH (b:Business {business_name: "SHARDA OFFICE SUPPLIES INC."}), (z:Zip{zip:"11242"}) MERGE (b)-[r:BELONGS_TO]->(z);
+
+
+
+
+
+
+
+
+

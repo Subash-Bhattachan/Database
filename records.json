@@ -1,0 +1,154 @@
+﻿[
+  {
+    "n": {
+"identity": 0,
+"labels": [
+        "Business"
+      ],
+"properties": {
+"date": "Apr 22 2015",
+"business_name": "SHARDA OFFICE SUPPLIES INC.",
+"address": "26 COURT ST, BROOKLYN, NY 11242",
+"id": "23453-2015-ENFO",
+"certificate_number": 9279891
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 1,
+"labels": [
+        "Business"
+      ],
+"properties": {
+"date": "Aug 20 2015",
+"business_name": "SHARDA OFFICE SUPPLIES INC.1",
+"address": "26 COURT ST, BROOKLYN, NY 11242",
+"id": "48178-2015-ENFO",
+"certificate_number": 50062033
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 2,
+"labels": [
+        "Business"
+      ],
+"properties": {
+"date": "Apr 22 2015",
+"business_name": "SHARDA OFFICE SUPPLIES INC.2",
+"address": "26 COURT ST, BROOKLYN, NY 11242",
+"id": "23447-2015-ENFO",
+"certificate_number": 9279890
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 3,
+"labels": [
+        "Business"
+      ],
+"properties": {
+"date": "Apr 21 2015",
+"business_name": "NZO CORP.",
+"address": "26 COURT ST, BROOKLYN, NY 11242",
+"id": "22269-2015-ENFO",
+"certificate_number": 3019483
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 4,
+"labels": [
+        "Business"
+      ],
+"properties": {
+"date": "Apr 22 2015",
+"business_name": "NZO CORP.1",
+"address": "26 COURT ST, BROOKLYN, NY 11242",
+"id": "23536-2015-ENFO",
+"certificate_number": 5373970
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 5,
+"labels": [
+        "Result"
+      ],
+"properties": {
+"result": "No Violation Issued"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 6,
+"labels": [
+        "Result"
+      ],
+"properties": {
+"result": "Pass"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 7,
+"labels": [
+        "Result"
+      ],
+"properties": {
+"result": "Violation Issued"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 8,
+"labels": [
+        "Result"
+      ],
+"properties": {
+"result": "Out of Business"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 9,
+"labels": [
+        "Zip"
+      ],
+"properties": {
+"zip": "11242"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 10,
+"labels": [
+        "Sector"
+      ],
+"properties": {
+"sector": "Grocery-Retail - 808"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 11,
+"labels": [
+        "Sector"
+      ],
+"properties": {
+"sector": "Cigarette Retail Dealer -127"
+      }
+    }
+  }
+]
